@@ -56,8 +56,9 @@ import {
   UPDATE_CHANNEL,
   UPDATE_VARIANT,
 } from './helpers';
+import { it, describe, expect, beforeAll, test, vi } from 'vitest';
 
-jest.setTimeout(20000);
+// vi.setTimeout(20000);
 
 describe('Stripe Subscription Plugin', function () {
   let server: TestServer;

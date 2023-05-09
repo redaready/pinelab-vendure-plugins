@@ -39,7 +39,7 @@ export class ScheduleService {
     } as Schedule);
     const schedule = await this.connection
       .getRepository(ctx, Schedule)
-      .findOneOrFail({ id });
+      .findOneOrFail({ where: { id } });
 
     return cloneSchedule(ctx, schedule);
   }
@@ -50,7 +50,7 @@ export class ScheduleService {
       .findOneOrFail({
         where: {
           id: scheduleId,
-          channelId: ctx.channelId,
+          channelId: ctx.channelId as string,
         },
       });
     await this.connection.getRepository(ctx, Schedule).delete({ id });

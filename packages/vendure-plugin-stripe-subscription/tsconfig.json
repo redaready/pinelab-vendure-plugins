@@ -1,4 +1,5 @@
 {
+  "emitDecoratorMetadata": true,
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "declaration": true,
@@ -6,5 +7,6 @@
     "skipLibCheck": true
   },
   "include": ["src/"],
-  "exclude": ["src/ui"]
+  "exclude": ["src/ui"],
+  "experimentalDecorators": true
 }
